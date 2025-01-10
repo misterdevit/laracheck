@@ -21,7 +21,7 @@ class BugController extends Controller
             'path' => 'required|string',
         ]);
 
-        $bug = new Bug();
+        $bug = new Bug;
         $bug->site_id = $request->site_id;
         $bug->env = $request->env;
         $bug->url = Str::limit($request->url, 250);

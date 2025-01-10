@@ -35,7 +35,7 @@ class SiteController extends Controller
             'url' => 'required|url',
         ]);
 
-        $site = new Site();
+        $site = new Site;
         $site->name = $request->name;
         $site->description = $request->description;
         $site->email = $request->email;

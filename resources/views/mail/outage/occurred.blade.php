@@ -2,14 +2,7 @@
 # 🛑 Outage Occurred
 
 <b>An incident has been detected.</b><br>
-The site {{ $site->name }} is currently down.
-
-<x-mail::table>
-| <span style="font-size: 16px; color: #000;">Outage #{{ $site->outages()->last()->id }}</span> |
-| :------------ |
-| <b>URL          </b><br>{{ $site->url }} |
-| <b>Occurred At  </b><br>{{ $site->outages()->last()->occurred_at }} ({{ config('app.timezone') }})|
-</x-mail::table>
+The site {{ $site->name }} ({{ $site->url }}) is currently down.
 
 Check the dashboard for more details!
 
